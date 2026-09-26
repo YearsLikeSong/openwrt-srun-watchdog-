@@ -1,0 +1,37 @@
+#!/bin/sh
+
+. /etc/srun.conf
+
+URL="http://connectivitycheck.gstatic.com/generate_204"
+SRUN="/root/srun-login"
+LOG="/tmp/srun-login.log"
+BODY="/tmp/srun-check.html"
+
+sleep 20
+
+while true; do
+    CODE=$(curl --noproxy '*' \
+        -s --max-time 8 \
+        -o "$BODY" \
+        -w '%{http_code}' \
+        "$URL")
+
+    if [ "$CODE" = "204" ]; then
+        echo "$(date) Network OK" >> "$LOG"
+
+    elif [ "$CODE" = "200" ] && \
+         grep -q "Authentication is required" "$BODY"; then
+
+        echo "$(date) Portal detected, logging in" >> "$LOG"
+
+        "$SRUN" \
+            -username "$USERNAME" \
+            -password "$PASSWORD" >> "$LOG" 2>&1
+
+        sleep 15
+    else
+        echo "$(date) Unknown status: $CODE" >> "$LOG"
+    fi
+
+    sleep 60
+done
