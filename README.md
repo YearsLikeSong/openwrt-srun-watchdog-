@@ -5,12 +5,12 @@
 
 ## 文件安装位置
 
-| 文件名称 | OpenWrt 安装路径 | 用途 |
+| 文件名称 | OpenWrt 安装路径 |
 |---|---|---|
-| srun | /etc/init.d/srun | 开机自启动服务 |
-| srun-watchdog | /usr/bin/srun-watchdog | 自动检测网络 |
-| srun.conf | /etc/srun.conf | 保存账号密码 |
-| srun-login | /root/srun-login | 校园网认证程序 |
+| srun | /etc/init.d/srun |
+| srun-watchdog | /usr/bin/srun-watchdog |
+| srun.conf | /etc/srun.conf |
+| srun-login | /root/srun-login |
 
 其中srun-login 由vidar-team开发，而 srun.conf 为账号密码配置，自行填写
 
