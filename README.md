@@ -14,6 +14,8 @@
 
 
 其中srun-login 由vidar-team开发，而 srun.conf 为账号密码配置，自行填写
+<CodeBlock language="markdown" editable={true}>
+```bash
 chmod +x /root/srun-login 添加执行权限
 
 chmod 700 /etc/init.d/srun
@@ -23,4 +25,7 @@ chmod 700 /root/srun-login
 
 /etc/init.d/srun enable
 /etc/init.d/srun start  开机启动
+```
+</CodeBlock>
+
 
