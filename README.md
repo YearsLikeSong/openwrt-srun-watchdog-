@@ -5,12 +5,16 @@
 
 ## 文件安装位置
 
+
+## 文件安装位置
+
 | 文件名称 | OpenWrt 安装路径 |
-|---|---|---|
+|---|---|
 | srun | /etc/init.d/srun |
 | srun-watchdog | /usr/bin/srun-watchdog |
 | srun.conf | /etc/srun.conf |
 | srun-login | /root/srun-login |
+
 
 其中srun-login 由vidar-team开发，而 srun.conf 为账号密码配置，自行填写
 
