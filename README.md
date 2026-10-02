@@ -8,9 +8,9 @@
 | 文件名称 | OpenWrt 安装路径 |
 |---|---|
 | srun | /etc/init.d/srun |
-| srun-watchdog | /usr/bin/srun-watchdog |
-| srun.conf | /etc/srun.conf |
-| srun-login | /root/srun-login |
+| srun-watchdog | /root/srun/srun-watchdog |
+| srun.conf | /root/srun/srun.conf |
+| srun-login | /root/srun/srun-login |
 
 
 其中srun-login 由vidar-team开发，而 srun.conf 为账号密码配置，自行填写
@@ -19,9 +19,9 @@
 chmod +x /root/srun-login 添加执行权限
 
 chmod 700 /etc/init.d/srun
-chmod 700 /usr/bin/srun-watchdog
-chmod 600 /etc/srun.conf
-chmod 700 /root/srun-login
+chmod 700 /root/srun/srun-watchdog
+chmod 600 /root/srun/srun.conf
+chmod 700 /root/srun/srun-login
 
 /etc/init.d/srun enable
 /etc/init.d/srun start  开机启动
