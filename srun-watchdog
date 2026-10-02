@@ -1,9 +1,9 @@
 #!/bin/sh
 
-. /etc/srun.conf
+. /root/srun/srun.conf
 
 URL="http://connectivitycheck.gstatic.com/generate_204"
-SRUN="/root/srun-login"
+SRUN="/root/srun/srun-login"
 LOG="/tmp/srun-login.log"
 BODY="/tmp/srun-check.html"
 
